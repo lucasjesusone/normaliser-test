@@ -5,13 +5,12 @@ import org.springframework.expression.ParseException;
 import javax.swing.text.Document;
 import java.awt.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
 
 public class Normaliser {
     public String normalise(String input) {
+
         String[] n = {"Architect", "Software engineer", "Quantity surveyor", "Accountant"};
         String normalisedTitle = null;
         double q = 0;
@@ -44,6 +43,7 @@ public class Normaliser {
         }
         return (2.0 * intersection) / union;
     }
+
 
     private List<String> wordLetterPairs(String str) {
         List<String> allPairs = new ArrayList<String>();
